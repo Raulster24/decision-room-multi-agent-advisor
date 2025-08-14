@@ -1,3 +1,4 @@
 streamlit
+pysqlite3-binary
 crewai==0.28.8
 openai

@@ -3,6 +3,12 @@ Decision Room - Production Version with Better UX and Accurate Cost Tracking
 All context fields visible, tabs included, model selection, real cost tracking
 """
 
+
+# Fix SQLite for Streamlit Cloud
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 import streamlit as st
 from crewai import Agent, Task, Crew
 import os
